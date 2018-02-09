@@ -9,21 +9,64 @@ function sumar()
     var resultado;
 
     numeroUno= document.getElementById("numeroUno").value;
-    numeroDos= document.getElementById("num")
+    numeroDos= document.getElementById("numeroDos").value;
+
+    numeroUno= parseInt(1);
+    numeroDos= parseInt(2);
+
+    resultado= numeroUno+numeroDos;
+
+    alert(resultado);
 }
 
 function restar()
 {
-	
+    var numeroUno
+    var numeroDos
+    var resultado
+
+    numeroUno= document.getElementById("numeroUno").value;
+    numeroDos= document.getElementById("numeroDos").value;
+
+    numeroUno= parseInt(1);
+    numeroDos= parseInt(2)
+
+    resultado=numeroUno-numeroDos;
+
+    alert(resultado);
 }
 
 function multiplicar()
 { 
-	
+    var numeroUno
+    var numeroDos
+    var resultado
+
+    numeroUno= document.getElementById("numeroUno").value;
+    numeroDos= document.getElementById("numeroDos").value;
+
+    numeroUno= parseInt(1);
+    numeroDos= parseInt(2);
+
+    resultado=numeroUno*numeroDos;
+
+    alert(resultado);
 }
 
 function dividir()
 {
-	
+    var numeroUno
+    var numeroDos
+    var resultado
+
+    numeroUno= document.getElementById("numeroUno").value;
+    numeroDos= document.getElementById("numeroDos").value;
+
+    numeroUno= parseInt(1);
+    numeroDos= parseInt(2);
+
+    resultado=numeroUno/numeroDos;
+
+    alert(resultado)
 }
 
