@@ -74,8 +74,5 @@ function CalcularPrecio ()
             }
          }
      }
-
-
-
-document.getElementById("precioDescuento").value=precioDescuento;
+    document.getElementById("precioDescuento").value=precioDescuento;
 }
