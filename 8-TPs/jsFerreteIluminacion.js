@@ -14,33 +14,68 @@ brutos en informar del impuesto con el siguiente mensaje: ”Usted pago X de IIB
 function CalcularPrecio () 
 {
      var cantidad = document.getElementById("Cantidad").value;
-     var precioDescuento = document.getElementById("precioDescuento").value;
+     var precioDescuento; 
      var marca = document.getElementById("Marca").value;
      var lampara
+     var precioFinalConDescuento
      
      lampara= parseInt(35);
 
-     if(cantidad>=6)
-      {
+     if(cantidad>5)
+    {
         precioDescuento=lampara*cantidad*50/100;
-          alert(precioDescuento);
-      }  
+          
+    }  
      else
-     {
-         if(cantidad==5)
+    { 
+         if(cantidad==5 && marca == "ArgentinaLuz")
          {
-             if(marca=="ArgentinaLuz")
-             {
-                precioDescuento=lampara*cantidad*60/100;
-                alert(precioDescuento);
-             }
-             else
-             {
-                precioDescuento=lampara*cantidad*70/100;
-                alert(precioDescuento);
-             }
+                
+          precioDescuento=lampara*cantidad*60/100; 
+                           
          }
-         
+         else
+         {
+            if(cantidad==5&& marca!= "ArgentinaLuz")
+            {
+                precioDescuento=lampara*cantidad*70/100;
+            }
+            else
+            {
+                if(cantidad==4 && marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+                {
+                    precioDescuento=lampara*cantidad*75/100;
+                }
+                else
+                {
+                    if(marca!="ArgentinaLuz" && marca!="FelipeLamparas")
+                    {
+                        precioDescuento=lampara*cantidad*80/100;
+                    }
+                    else
+                    {
+                        if(cantidad==3 && marca=="ArgentinaLuz")
+                        {
+                            precioDescuento=lampara*cantidad*85/100;
+                        }
+                        else
+                        {
+                            if(marca=="FelipeLamparas")
+                            {
+                                precioDescuento=lampara*cantidad*90/100;
+                            }
+                            else
+                            {
+                                precioDescuento=lampara*cantidad*95/100;
+                            }
+                        }
+                    }
+                }
+            }
+         }
      }
 
+
+
+document.getElementById("precioDescuento").value=precioDescuento;
 }
