@@ -16,10 +16,9 @@ function CalcularPrecio ()
      var cantidad = document.getElementById("Cantidad").value;
      var precioDescuento; 
      var marca = document.getElementById("Marca").value;
-     var lampara
-     var precioFinalConDescuento
-     
-     lampara= parseInt(35);
+     var lampara;
+     var importeFinal=0;
+     lampara=35;
 
      if(cantidad>5)
     {
@@ -74,5 +73,12 @@ function CalcularPrecio ()
             }
          }
      }
-    document.getElementById("precioDescuento").value=precioDescuento;
+     if(precioDescuento>=120)
+     {
+        importeFinal=precioDescuento*10/100;
+        alert("Usted pago "+importeFinal+" de IIBB.")
+     }
+
+    document.getElementById("precioDescuento").value=precioDescuento + importeFinal;
+
 }
