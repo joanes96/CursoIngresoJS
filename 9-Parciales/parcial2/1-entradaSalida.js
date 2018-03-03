@@ -3,11 +3,11 @@ function Mostrar()
 {
 	alert("Funciona 1-EntradaSalida");
 
-	var triangulo = document.getElementById("lado").value;
+	var base = document.getElementById("lado").value;
 	var perimetro
 
-	triangulo= parseInt(triangulo);
-	perimetro=triangulo*3;
+	base= parseFloat(base);
+	perimetro=base*3;
 	alert(perimetro);
 }
 

@@ -4,17 +4,13 @@ por <strong>prompt</strong> y muestre el importe final sumándole el IVA (21%) *
 					
 function Mostrar()
 {
-	alert("Funciona 2-EntradaSalida");
-	var producto = prompt("Ingrese Producto")
-	var importeFinal=document.getElementById("importe").value;
-
-	alert(producto)
-	producto=parseInt(35)
-	importeFinal=producto*21/100;
-
-
-
-
+	
+	var importe;
+	var importeFinal;
+	importe=prompt("Ingrese el importe del producto");
+	importe=parseFloat(importe);
+	importeFinal=importe*1.21;
+	document.getElementById("importe").value=importeFinal;
 
 	
 
